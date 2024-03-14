@@ -39,7 +39,7 @@ const initializeSeverAndDatabase = async () => {
       driver : sqlite3.Database
     })
 
-    app.listen(port, () => {
+    app.listen(3000, () => {
       console.log("Server Running at https://localhost:3000/");
     });
   } catch (error) {
