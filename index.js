@@ -50,7 +50,7 @@ const initializeSeverAndDatabase = async () => {
 
 initializeSeverAndDatabase();
 
-app.post("/signup", async (request, response) => {
+app.post("/user", async (request, response) => {
   try {
     const { username, password, gender, location } = request.body;
 
