@@ -94,6 +94,7 @@ app.post("/signup", async (request, response) => {
   }
 });
 
+/* 
 app.get("/users", async (req, res) => {
   const sqlQuery = `
     SELECT * FROM users;
@@ -106,6 +107,7 @@ app.get("/users", async (req, res) => {
 
   res.json(users);
 })
+*/
 
 app.post("/login",async (request , response) => {
 
@@ -135,7 +137,9 @@ app.post("/login",async (request , response) => {
     if(signedPassword){
       // const jwtToken = await jwt.sign(username,"SECRET_KEY");
 
-      response.send("Logged in successfully");
+      const jwtToken = jwt.sign(payload, "MY_SECRET_TOKEN");
+      response.send({ jwtToken })
+
     }else{
       response.send("Invalid password")
     }
