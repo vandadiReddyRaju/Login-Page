@@ -1,0 +1,24 @@
+POST http://localhost:3004/signup
+Content-Type: application/json
+
+{
+    "username" : "raju",
+    "password": "raju@456",
+    "gender":"male",
+    "location" : "bengaluru"
+}
+
+###
+
+GET http://localhost:3004/users 
+
+
+### 
+
+POST http://localhost:3004/login
+Content-Type: application/json
+
+{
+    "username" : "raju",
+    "password": "raju@456"
+}
